@@ -1,42 +1,81 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap');
 
-
-
+/*reset*/
 *{
     box-sizing: border-box;
     margin: 0px;
-    padding: 0px;
-   
+    padding: 0px;  
 }
 
 /*navigation bar*/
-.head{
+nav{
     width: 100%;
-    height: 65px;
-    padding-top: 5px;
-    background-color: rgb(14, 56, 241);   
-    
-    
+    padding: 10px 0px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(14, 56, 241);      
 }
 
-.head li{
+ /*AZ logo*/
+ .logo{ 
+ flex-basis: 20%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo img{
+  width: 50%;
+}
+
+.menu{
+  flex-basis: 60%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+  transition: all 0.4s ease-in;
+}
+
+.head {
+  width: 100%;
+}
+
+.menu li{
     display: inline;
-    list-style-type: none;   
+    list-style-type: none;  
+    position: relative; 
 }
 
 a{
     text-decoration: none;
-    font-size: 20px;
-    color: white;
-    
+    font-size: 1.25rem;
+    color: white;  
 }
 
 .head button{
-    width: 180px;
-    height: 50px;
     background-color: rgb(14, 56, 241);
     border: none;
+}
+
+/* ---Hamburger--- */
+nav input[type="checkbox"]{
+  display: none;
+}
+
+nav > label{
+  position: absolute;
+  top: 40px;
+  right: 5%;
+  cursor: pointer;
+  z-index: 5;
+  font-size: 1.5rem;
+  display: none;
+  color: white;
 }
 
 .dropdown{
@@ -54,79 +93,68 @@ a{
     margin: 0; 
   }
 
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(12, 10, 10, 0.2);
-    z-index: 1;
-  }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(12, 10, 10, 0.2);
+  z-index: 1;
+}
 
 .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    font-family: sans-serif;
-    display: block;
-    text-align: left;
-  }
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-family: sans-serif;
+  display: block;
+  text-align: left;
+}
 
-  .dropdown:hover .dropdown-content {
-    display: block;
-   
-  }
+.dropdown:hover .dropdown-content {
+  display: block;
+  
+}
 
-  .dropdown-content a:hover {
-    background-color: rgb(14, 56, 241);
-  }
+.dropdown-content a:hover {
+  background-color: rgb(14, 56, 241);
+}
 
-  a:hover{
-      color: yellow;
-  }
+a:hover{
+    color: yellow;
+}
 
-  .head button:hover{
-      color: yellow;
-  }
+.head button:hover{
+    color: yellow;
+}
 
-  /*AZ logo*/
-  #logo{ 
-      background-image: url(images/logo2.png);
-      background-size: cover;
-      margin-left: 50px;
-      margin-right: 200px;
-      padding-top: 10px;
-  }
-
-  #login{
-     float: right;   
-    overflow: hidden;
-  }
+#login{
+  float: right;   
+  overflow: hidden;
+}
 
 /*slider*/
-  .slider{
-    overflow: hidden;
-    width: 65%;
-    height: 80vh;
-    background-size: cover;
-    margin: 0px 100px 68px 100px;
-    padding-top: 60px;    
-    background-position: center;   
-  }
+.slider{
+  overflow: hidden;
+  width: 65%;
+  height: auto;
+  background-size: cover;
+  margin: 0px 100px 68px 100px;
+  padding-top: 60px;    
+  background-position: center;   
+}
 
 /*one slide*/
 .slider figure div{
   float: left;
   width: 20%;
-
 }
 
 .slider figure img{
   width: 100%;
-  height: 80vh;
+  height: auto;
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -139,6 +167,47 @@ a{
   margin: 0;
   animation: anim 25s infinite;
 }
+
+
+/*slider1*/
+.slider1{
+  position: relative;
+  width: 60%;
+  height: auto;
+  background-size: cover;  
+  margin-left: 20%;
+  margin-right: 20%;
+  border-radius: 15px;   
+}
+
+.slider1 img{
+  width: 100%;
+  height: auto;
+  border-radius: 15px; 
+}
+
+.slider1 .learn2{
+  width: 16%;
+  height: fit-content;
+  position: absolute;
+  padding: 15px 6px;
+  background-color: red;
+  color: white;
+  border: none;
+  top: 90%;
+  left: 90%;
+  transform: translate(-80%, -80%);
+  -ms-transform: translate(-80%, -80%);
+  border-radius: 8px;
+  font-size:1.2vw;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.learn2:hover{
+  color: yellow;
+}
+
 
 /*animation*/
 @keyframes anim{
@@ -183,8 +252,6 @@ a{
   100%{
     left: 0%
   }
-
-
 }
 
   /*footer*/
@@ -197,97 +264,32 @@ a{
     display: flex;
 	  justify-content: center;
 	  align-items: center;
-    font-family: sans-serif;
-
-   
+    font-family: sans-serif;   
   }
-
-  .Cprograming{
-    width: 60%;
-    height: 450px;
-     background-image: url(home-images/c4.png);
-     background-size: cover;
-     
-    
-     margin-left: 20%;
-     margin-right: 20%;
-     border-radius: 15px;
-   
-     
-
-  }
-
-  .html{
-    width: 60%;
-    height: 450px;
-     background-image: url(home-images/ht7.jpg);
-     background-size: cover;  
-     margin-left: 20%;
-     margin-right: 20%;
-     border-radius: 15px;
-   
-   
-  }
-
-  .css{
-    width: 60%;
-    height: 450px;
-     background-image: url(home-images/cs4.png);
-     background-size: cover;
-     margin-left: 20%;
-     margin-right: 20%;
-     border-radius: 15px; 
-  }
-
-  .java{
-    width: 60%;
-    height: 450px;
-     background-image: url(home-images/java1.jpg);
-     background-size: cover;
-     margin-left: 20%;
-     margin-right: 20%;
-     border-radius: 15px;
-  }
-
-.learn{
-width: 120px;
-height: 50px;
-background-color: red;
-display: flex;
-justify-content: center;
-align-items: center;
-color: rgb(255, 255, 255);
-font-weight: bold;
-float: right;
-margin-top: 330px;
-margin-right: 30px;
-border-radius: 10px;
-}
 
 .bgcolor{
   background: url(images/1.jpg);
   background-size: cover;
   width: 100%;
- 
-  
-  
 }
 
 #hr1{
   border: 2px solid rgb(31, 7, 168);
-  
-
 }
 
 h1{
-  text-align: center;
-  padding: 10px;
-  font-size: 55px;
+  font-size: 4vw;
   font-family: Roboto;
-  margin-left: 20%;
-  margin-right: 20%;
   font-weight: bold;
   color:  rgb(31, 7, 168);
+}
+
+.title{
+  text-align: center;
+  padding: 10px;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
   background-color: rgb(214, 232, 250);
   opacity: 0.9;
   margin-bottom: 40px;
@@ -296,18 +298,18 @@ h1{
 
 #hr2{
   border: 5px solid black;
-
-
 }
 
 .learn1{
   width: 100%;
-  height: auto;
- background: url(Home-Images/1.jpg);
- background-size: cover;
-  padding: 80px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  background: url(Home-Images/1.jpg);
+  background-size: cover;
+  padding-top: 3%;
+  padding-bottom: 3%; 
 }
-
 
 #i4{
   background-image: url(Home-Images/b2.jpg);
@@ -320,3 +322,143 @@ h1{
 #i3{
   background-image: url(Home-Images/b8.jpg);
 }
+
+/* ---Responsive--- */
+@media(max-width: 1980px){
+
+  /* Menu Bar */
+  .menu{
+      flex-basis: 70%;
+  }
+}
+
+@media(max-width: 1366px){
+  /* Menu Bar */
+  .menu{
+      flex-basis: 60%;     
+  } 
+}
+
+@media(max-width: 1080px){
+  /* Menu Bar */
+  .menu{
+      flex-basis: 70%;     
+  } 
+}
+
+@media(max-width: 960px){
+  /* Menu Bar */
+  .menu{
+      flex-basis: 70%;     
+  } 
+}
+
+@media(max-width: 900px){
+
+  .slider1 .learn2{
+    padding: 10px 0px;
+    width: 15%;
+    border-radius: 5px;
+  }
+
+  .nav{
+    justify-content: space-between;
+    flex-direction: column;       
+  } 
+
+  .logo{
+    margin: 2px 0;
+    margin-top: 0px;
+    width: 30%;
+}
+
+  .logo img{
+    width: 180px;
+  }
+
+  /* Menu Bar */
+  .menu{
+    position: absolute;
+    width: 100vw;
+    flex-direction: column;
+    overflow-x: hidden;
+    margin-top: 0px;
+    left: -110%;
+    top: 80px;
+    transition: all 0.4s ease-in;
+    background-color: rgb(90, 63, 243); 
+  }
+
+.dropdown > li{
+  margin-bottom: 50px;
+}
+
+.dropdown > li > button{
+  padding: 20px 50px;
+  background-color: rgb(90, 63, 243);
+}
+
+/* ---Hamburger--- */
+nav > label:nth-child(3){
+  display: block;
+}
+
+/* Display Menu */
+#menu:checked ~ .menu{
+  left: 0;
+}
+
+#menu:checked ~ label:nth-child(4){
+  display: block;
+}
+
+#menu:checked ~ label:nth-child(3){
+  display: none;
+}
+
+/* Sub Menus */
+.dropdown-content,.dropdown,.dropdown > li > button{
+  background: none;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown-content a:hover{
+  position: relative;
+  width: 180px;
+}
+
+/*slide*/
+.slider{
+  width: 80%;
+  margin: 0px 50px 68px 50px;
+}
+
+.Cprograming{
+  width: 60%;
+  height: 450px;
+  background-image: url(home-images/c4.png);
+  background-size: cover;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-radius: 15px;
+}
+
+.title{
+  padding: 8px;
+}
+
+}
+
+@media(max-width: 620px){
+
+  .slider1 .learn2{
+    padding: 6px 0px;
+    width: 15%;
+    border-radius: 5px;
+  }
+
+  .title{
+    padding: 5px;
+  }
+}
+

@@ -9,10 +9,11 @@
     <title>Youtube Links</title>
 </head>
 <body>
-    <div class="top">
-        <a href="index.php"><button class="btn"><i class="fa fa-home"></i></button></a>
-        <h1>YouTube Resources</h1>
-    </div>
+    <div class="top"><!--header-->
+        <div class="logo"> <a href="index.php">
+             <img src="images/logo2.png" alt=""></a></div>
+     <div class="head"><h1>Download latest versions of Softwares</h1></div>
+ </div>
     
     <div class="background">
         <center>

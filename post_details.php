@@ -17,10 +17,8 @@ if (isset($_SESSION['id']) && isset($_SESSION['Full_Name'])) {
 <body>
 	<!-- Header -->
 <header id="main-header">
-  <div class="cont">
-     <a href="index.php"> <div class="logo">
-          
-      </div></a>
+	<a href="index.php"><div class="logo"></div></a>                
+	<div class="head"><h1 id="qa">Q & A Section</h1></div>
       <nav id="navbar"> 
 	  <div class="dropdown">
   <li>Hi,<?php echo $_SESSION['Full_Name']; ?> </li>
@@ -29,11 +27,12 @@ if (isset($_SESSION['id']) && isset($_SESSION['Full_Name'])) {
   </div>
 </div>
   </nav>
-            <div class="search-container">       
-                <h1 id="qa">Q & A Section</h1>
-            </div>          
-  </div>
+                 
+                
+                 
+ 
 </header><!--End of the Header -->
+<br>
 <div class="all">
 
   <!-- Category Section -->

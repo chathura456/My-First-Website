@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="home page.css">
     
     
@@ -13,19 +13,26 @@
 <body>
 
     <div class="head"><!--Navigation Bar create-->
+        <nav>
+            <div class="logo">
+           <img src="images/logo2.png" alt="">
+            </div>
 
-        <ul>
-
-            <div class="dropdown" ><li><button id="logo"></button></li></div>
+             <!-- Hamburger Menu -->
+             <input type="checkbox" name="" id="menu">
+             <label for="menu"><i class="fas fa-bars"></i></label>
+             <label for="menu"><i class="fas fa-times"></i></label>
+             <!-- Menu Bar -->
+        <ul class="menu">
             <div class="dropdown"><li><button><a href="#">Home</a></button></li></div>
             <div class="dropdown">
             <li><button class="dropbtn" id="1"><a href="#">Category  <i class="fa fa-caret-down"></i></a></button></li>
             <div class="dropdown-content">
-                <a href="Category-Branch/clesson.html">C Programming</a>
-                <a href="Category-Branch/ccc.html">C++</a>
-                <a href="Category-Branch/htmllesson.html">HTML</a>
-                <a href="Category-Branch/csslesson.html">CSS</a>
-                <a href="Category-Branch/Javalession.html">JAVA</a>
+                <a href="new-category/c++.php">C++</a>
+                <a href="new-category/HTML.php">HTML</a>
+                <a href="new-category/css.php">CSS</a>
+                <a href="new-category/javascript.php">JavaScript</a>
+                <a href="new-category/java.php">JAVA</a>
             </div>
         </div>
 
@@ -43,14 +50,14 @@
             <li><button class="dropbtn" id="1"><a href="#">Community <i class="fa fa-caret-down"></i></a></button></li>
             <div class="dropdown-content">
                 <a href="post_details.php">Q & A</a>
-                <a href="ourteam.php">Our Team</a>
                 
             </div>
         </div>
             
-            <div class="dropdown"><li><button><a href="New-Compiler/Compiler.php">Try it Yourself</a></button></li></div>
+            <div class="dropdown"><li><button><a href="compiler-test/TestCompiler.php">Try it Yourself</a></button></li></div>
             
         </ul>
+    </nav>
     </div><!--End of the nav bar-->
 
     
@@ -75,27 +82,40 @@
 <hr id="hr2"></center>
 
 <div class="learn1" id="i1">
-<h1>Learn C Programming</h1>
-<!--Category photos and links-->
-<div class="Cprograming"><a href="category-branch/Cprogramming.html">
-    <div class="learn" >Learn More..</div></a>
-</div></div><hr id="hr1">
+<div class="title"><h1>Learn C++ Programming</h1></div>
+<div class="slider1"> 
+        <img src="home-images/c4.png" alt="">  
+        <a href="new-category/c++.php"><button class="learn2" >
+                Learn More..
+            </button></a> </div>   
+</div><hr id="hr1">
+
 <div class="learn1" id="i2">
-<h1>Learn HTML</h1>
-<div class="html"><a href="category-branch/htmlsession.html">
-    <div class="learn">Learn More..</div></a>
-</div></div><hr id="hr1">
+    <div class="title"><h1>Learn HTML</h1></div>
+    <div class="slider1"> 
+            <img src="home-images/ht7.jpg" alt="">  
+            <a href="new-category/HTML.php"><button class="learn2" >
+                    Learn More..
+                </button></a> </div>   
+    </div><hr id="hr1">
+
 <div class="learn1" id="i3">
-<h1>Learn CSS</h1>
-<div class="css"><a href="category-branch/css.html">
-    <div class="learn">Learn More..</div></a>
-</div></div><hr id="hr1">
+    <div class="title"><h1>Learn CSS</h1></div>
+    <div class="slider1"> 
+            <img src="home-images/cs4.png" alt="">  
+            <a href="new-category/css.php"><button class="learn2" >
+                    Learn More..
+                </button></a> </div>   
+    </div><hr id="hr1">
+
 <div class="learn1" id="i4">
-<h1>Learn JAVA</h1>
-<div class="java"><a href="category-branch/java.html">
-    <div class="learn">Learn More..</div></a>
-    
-</div></div>
+    <div class="title"><h1>Learn JAVA</h1></div>
+    <div class="slider1"> 
+            <img src="home-images/java1.jpg" alt="">  
+            <a href="new-category/java.php"><button class="learn2" >
+                    Learn More..
+                </button></a> </div>   
+    </div>
 
 <div class="footer"><p>Copyright &copy; AzCoding 2021</p></div>
 </div>

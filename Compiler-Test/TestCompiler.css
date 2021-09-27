@@ -1,0 +1,265 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+head{
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(76, 0, 255);
+}
+
+.logo{
+    
+    padding-left: 30px;
+}
+
+.logo img{
+    width: 120px;
+    height: auto;
+  }
+
+html{
+    font-size: 62.5%;
+}
+
+.editor-menu{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(76, 0, 255);
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0 5px 0px;
+    float: right;
+    position: relative;
+}
+
+.buttons{
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    height: 58px;
+    background-color: #eee;
+    padding: 10px;
+    border-bottom: 2px solid #09033b;
+}
+.btn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #09033b;
+    padding: 8px 7px;
+    border-radius: 3px;
+    font-size: 1.6rem;
+    margin-right: 8px;
+    color: white;
+    min-width: 5rem;
+}
+
+.btn:hover{
+    background-color: rgb(241, 174, 98);
+}
+
+.live{
+    font-size: 1.6rem;
+    font-weight: bold;
+    border: 2px solid red;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+.live >*{
+    cursor: pointer;
+}
+
+.container{
+    position: absolute;
+    bottom: 0;
+    top: 6rem;
+    width: 100%;
+    display: flex;
+    position: absolute;
+}
+
+ .right{
+    height: 100%;
+    width: 50%;
+   
+    
+}
+
+.left{
+    height: 100%;
+    width: 50%;
+    
+  
+}
+
+
+
+.editor{
+    width: 100%;
+    height: 100%;
+    font-size: 1.6rem;
+    outline: none;
+    padding: 1rem 0 0 1rem;
+    border-color: #ccc;
+    
+
+}
+
+.title{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 3vw;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.edit{
+    width: 100%;
+    height: 58px;
+    background-color: #eee;
+    padding: 8px;
+    color: #09033b;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    border-left: 4px solid #09033b;
+    border-bottom: 2px solid #09033b;
+}
+
+.iframe{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    overflow-y: auto;
+    white-space: pre;
+    right: 0;
+    padding: 4px;
+    border-left: 4px solid #09033b;
+}
+
+@media(max-width: 900px){
+
+    .edit{
+       height: 40px;
+        border-left: none;
+        padding: 4px;
+        font-size: 25px;
+    }
+
+    .btn{  
+        padding: 5px 4px;
+        min-width: 4rem;
+        font-size: 1.4rem;
+    }
+
+    .title{
+        font-size: 30px;
+    }
+
+    .buttons{
+        height: 40px;
+        padding: 4px;
+    }
+
+
+
+    .logo{
+        min-width: 100px;
+    }
+
+    .live{
+        font-size: 1.4rem;   
+        padding: 4px;
+    }
+
+    .left{
+       
+        width: 100%;
+        height: 300px;
+        border: 1px solid #eee;
+        border-bottom: 3px solid #09033b;
+    }
+
+.right{
+       
+        width: 100%;
+        height: auto;
+        border: 1px solid #eee;
+    }
+
+    .editor{
+        width: 100%;
+        height: 300px;
+        font-size: 1.6rem;
+        outline: none;
+        padding: 1rem 0 0 1rem;
+        border-color: #ccc;
+    
+    }
+    
+    .iframe{
+        width: 100%;
+        height: 500px;
+        background-color: #fff;
+        overflow-y: auto;
+        white-space: pre;
+        right: 0;
+        padding: 4px;
+        border: none;
+    }
+
+    .container{
+        position: absolute;
+        bottom: 0;
+       top: 5rem;
+        width: 100%;
+        display: block;
+    }
+    
+  }
+
+@media(max-width: 620px){
+
+    .btn{  
+        padding: 4px 2px;
+        min-width: 4rem;
+        font-size: 1.2rem;
+    }
+
+    .logo{
+        min-width: 100px;
+    }
+
+    .live{
+        font-size: 1.2rem;   
+        padding: 2px;
+
+    }
+
+    .title{
+        font-size: 20px;
+    }
+  }
